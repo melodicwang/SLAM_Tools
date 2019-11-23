@@ -11,17 +11,3 @@
 |重命名文件（文件夹）|mv old_name new_name|
 |copy文件|cp file_name new_file_name|
 
-
-
-
-
-
-
-
-
-## windows
-
-定时关机
-```
-shutdown -f -s -t 3600
-```
