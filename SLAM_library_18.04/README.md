@@ -26,6 +26,8 @@ sudo apt install ros-melodic-desktop-full
 ```
 sudo rosdep init
 rosdep update
+
+这一步如果频繁报错可能是网络被墙了，用手机开个热点执行这一步就好。
 ```
 
 ### 1.6 Environment setup
@@ -39,8 +41,9 @@ source ~/.bashrc
 sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
 
-## 2. Ceres
-### 2.1 Required Dependencies(非共享库)
+
+## 2. Ceres(非共享库)
+### 2.1 Dependencies
 ```
 sudo apt-get install liblapack-dev libsuitesparse-dev libcxsparse3 libgflags-dev libgoogle-glog-dev libgtest-dev
 ```
@@ -52,35 +55,31 @@ cd ceres
 mkdir build
 cd build/
 cmake ..
-make -j12
+make -j13
 make test	// 可选
 sudo make install
 ```
+
 
 ## 3. Sophus
 ```
 git clone http://github.com/strasdat/Sophus.git
 ```
-### 3.1 在编译之前需要打开　sophus/so2.cpp　文件，将
-```
-    unit_complex_.real() = 1. ;
-    unit_complex_.imag() = 0. ;     
-    改为
-    unit_complex_.real(1.) ;
-    unit_complex_.imag(0.) ;
-```
-## 3.2 Installation
+### 3.1 
+
+### 3.2 Installation
 ```
 cd Sophus/
 mkdir build
 cd build/
 cmake ..
-make -j12
+make -j13
 [无需安装]
 ```
 
+
 ## 4. Pangolin
-### 4.1 Required Dependencies
+### 4.1 Dependencies
 ```
 sudo apt install libgl1-mesa-dev libglew-dev libxkbcommon-dev
 ```
@@ -94,10 +93,11 @@ cmake ..
 cmake --build .
 ```
 
+
 ## 5. g2o
-### 5.1 Required Dependencies
+### 5.1 Dependencies
 ```
-sudo apt-get install libqt4-dev qt4-qmake libsuitesparse-dev libcxsparse3.1.4 libcholmod-dev
+sudo apt install libqt4-dev qt4-qmake libsuitesparse-dev libcxsparse3 libcholmod3
 ```
 ### 5.2 Installation
 ```
@@ -106,70 +106,78 @@ cd g2o/
 mkdir build
 cd build/
 cmake ..
-make -j12
+make -j13
 sudo make install
 ```
 
-## 5. PCL
-### 5.1 Required Dependencies
 
-### 5.2 Installation
-```
-sudo apt-get install libpcl-dev pcl-tools
-```
-
-
-## 6. Octomap & octovis
-### 6.1 Required Dependencies
+## 6. PCL
+### 6.1 Dependencies
 
 ### 6.2 Installation
 ```
-sudo apt-get install liboctomap-dev octovis
+sudo apt install libpcl-dev pcl-tools
 ```
 
-## 10. Eigen
-### 10.1 Installation
+
+## 7. Octomap & octovis
+### 7.1 Dependencies
+
+### 7.2 Installation
 ```
-sudo apt-get install libeigen3-dev
+sudo apt install liboctomap-dev octovis
 ```
-### 10.2 Check version  
+
+
+
+
+
+## 11. Eigen
+### 11.1 Installation
+```
+sudo apt install libeigen3-dev
+```
+### 11.2 Check version  
 ```
 pkg-config --cflags libeigen3-dev
 ```  
-## 10.3 Remove
+### 11.3 Remove
 ```
-sudo apt-get remove libeigen3-dev
+sudo apt remove libeigen3-dev
 ``` 
 
-### 11. opencv
 
-### 11.2 Check version  
+## 12. opencv from source
+### 12.1 Dependencies
+
+### 12.2 Check version  
 ```
 pkg-config --modversion opencv
 ```
 
 
-### 12. glog
-### 12.1 Required Dependencies
+## 13. glog from source
+### 13.1 Dependencies
 ```
-sudo apt-get install autoconf automake libtool
+sudo apt install autoconf automake libtool
 ```
 
-### 12.2 Installation
+### 13.2 Installation
 ```
-sudo apt-get install autoconf automake libtool
+sudo apt install autoconf automake libtool
 
 git clone https://github.com/google/glog
 ./autogen.sh
 ./configure
-make -j12
+make -j13
 sudo make install
 ```
 
-## 13. gflags
-### 13.1 Required Dependencies
 
-### 13.2 Installation
+## 14. gflags from source
+### 14.1 Dependencies
+
+### 14.2 Installation
 ```
 sudo apt install libgflags-dev
 ```

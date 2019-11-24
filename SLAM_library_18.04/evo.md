@@ -41,7 +41,7 @@
 
 ### 1.2 pip
 ```
-sudo apt install python-pip
+sudo apt install python3-pip
 
 pip install -U pip
 pip --version
@@ -58,7 +58,7 @@ python -c "import numpy; print numpy.version.version"
 ```
 cd ~/library
 git clone https://github.com/MichaelGrupp/evo.git
-pip install --editable . --upgrade --no-binary evo --user
+pip3 install --editable . --upgrade --no-binary evo --user
 ```
 
 ### 1.5 evo test
