@@ -1,9 +1,11 @@
 # evo工具 
 ***Python package for the evaluation of odometry and SLAM***
 
-|[github.com/MichaelGrupp/evo](https://github.com/MichaelGrupp/evo)|
+https://github.com/MichaelGrupp/evo
+||
 | :---: |
 | TUM / KITTI / EuRoc / ROS bag |
+||
 
 **Metrics:**
 * evo_ape 绝对位姿误差，常作为绝对轨迹误差使用，一般用来评价轨迹的全局一致性。通过姿态关系直接估计和参考对应姿态。然后，计算整个轨迹的统计数据。
@@ -35,14 +37,13 @@
 
 ## 1. Installation / Upgrade
 ### 1.1 Dependencies  
-	evo has the following dependencies that are ***automatically resolved*** during installation:
+evo has the following dependencies that are *automatically resolved* during installation:
 
-	*numpy, matplotlib, scipy, pandas, seaborn, natsort, argcomplete, colorama, pygments, enum34 (only Python 2.7)*
+*numpy, matplotlib, scipy, pandas, seaborn, natsort, argcomplete, colorama, pygments, enum34 (only Python 2.7)*
 
 ### 1.2 pip
 ```
 sudo apt install python-pip
-
 pip install -U pip
 pip --version
 ```

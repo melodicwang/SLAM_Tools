@@ -49,6 +49,7 @@ cd ..
 make init
 make ros
 make samples
+make clean
 ```
 
 如果出现error 找不到 OpenCVConfig.cmake opencv-config.cmake
